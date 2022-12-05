@@ -1,0 +1,1 @@
+Each scripts are based on shell Input/Output Redirections.
