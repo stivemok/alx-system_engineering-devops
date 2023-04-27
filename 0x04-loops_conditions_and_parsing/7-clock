@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# dispays time for 12 hrs and 59 min
+
+hr=0
+while [ $hr -le 12 ]
+do
+    echo "Hour: $hr"
+    min=1
+    while [ $min -le 59 ]
+    do
+	echo "$min"
+	(( min ++ ))
+    done
+    (( hr++ ))
+done
