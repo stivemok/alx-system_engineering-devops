@@ -35,7 +35,7 @@ How to use the cut command
 What are files and other comparison operators, and how to use them
 
 ## Requirements
-###General
+### General
 Allowed editors: vi, vim, emacs
 
 All your files will be interpreted on Ubuntu 20.04 LTS
