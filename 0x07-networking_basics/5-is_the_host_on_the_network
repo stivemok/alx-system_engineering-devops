@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# pings an IP address (5 times) passed as an argumen
+
+if [[ -z "$1" ]];
+then
+    echo "Usage: 5-is_the_host_on_the_natwork{IP_ADDRESS}"
+fi
+    ping -c 5 "$1"
