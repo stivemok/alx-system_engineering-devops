@@ -7,4 +7,3 @@ file {'school':
   group   => 'www-data',
   content => 'I love puppet'
   }
-  
