@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Run Appache
 
-sudo service apache start
+sudo service apache2 start
