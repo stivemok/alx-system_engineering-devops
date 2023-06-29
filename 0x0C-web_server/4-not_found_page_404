@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
-# Install nginx on your web-01 server
+# A script that configures a brand new Ubuntu machine
 apt-get -y update
+apt-get -y upgrade
 apt-get -y install nginx
+sudo service nginx start
+# create index.html with "Hello World"
 echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+#configure redirect to "youtube"
 sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+# customize 404 page
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
+# configures the custom 404 page
 sed -i "46i error_page 404 /custom_404.html;" /etc/nginx/sites-available/default
 service nginx restart
