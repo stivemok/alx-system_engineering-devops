@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 # Make task #1 short and sweet
 
-# Update the default serverto listen on port 8080
 sed -i "s/80 /8080 /g" /etc/nginx/sites-available/default
-# Change user in the config file to nginx
 sed -i "s/#usr www-data/user nginx/g" /etc/nginx/nginx.conf
-#Change permissions of nginx config file to owner rwe, go re
 chmod 755 /etc/nginx/nginx.conf
-# Kill any running Apache processes
 killall apache2
 su nginx -c "service nginx restart"
