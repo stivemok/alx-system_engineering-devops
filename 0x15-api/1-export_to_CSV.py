@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Expand task 0 to export data in the CSV format"""
 import csv
 import requests
